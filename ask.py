@@ -41,7 +41,7 @@ if i_need_key and uploaded_file is not None:
                 Please provide a detailed exploratory data analysis (EDA) report based on this summary. Include insights, patterns, and any recommendations for further analysis.
                 KEEP IT PROFESSIONAL AND DETAILED. DO NOT REPEAT THE SUMMARY. FOCUS ON INSIGHTS AND RECOMMENDATIONS."""
 
-                response=i_need_key.models.generate_content(model="gemini-3.1-pro-preview",contents=eda_prompt)
+                response=i_need_key.models.generate_content(model="gemini-3.1-pro",contents=eda_prompt)
 
                 st.success("Report generated successfully!")
                 st.write(response.content[0].text)
@@ -56,7 +56,7 @@ if i_need_key and uploaded_file is not None:
                 Please provide a detailed and professional answer to the user's question based on the dataset summary. Include insights, patterns, and any recommendations for further analysis.
                 KEEP IT PROFESSIONAL AND DETAILED. DO NOT REPEAT THE SUMMARY. FOCUS ON INSIGHTS AND RECOMMENDATIONS."""
 
-                response=i_need_key.models.generate_content(model="gemini-3.1-pro-preview",contents=chat_prompt)
+                response=i_need_key.models.generate_content(model="gemini-3.1-pro",contents=chat_prompt)
 
                 st.success("Response generated successfully!")
                 st.write(response.content[0].text)
