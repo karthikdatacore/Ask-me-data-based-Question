@@ -44,7 +44,7 @@ if i_need_key and uploaded_file is not None:
                 response=i_need_key.models.generate_content(model="gemini-3.5-flash-lite",contents=eda_prompt)
 
                 st.success("Report generated successfully!")
-                st.write(response.content[0].text)
+                st.write(response.text)
 
     with tab2:
         st.subheader("Conversational Data Chat")
@@ -59,7 +59,7 @@ if i_need_key and uploaded_file is not None:
                 response=i_need_key.models.generate_content(model="gemini-3.1-pro",contents=chat_prompt)
 
                 st.success("Response generated successfully!")
-                st.write(response.content[0].text)
+                st.write(response.text)
 
         try:
             response=i_need_key.models.generate_content(model="gemini-3.5-flash-lite",contents=chat_prompt)
